@@ -39,7 +39,9 @@
      <br>
      <button id="condividiPdf" onclick="condividiPdf()">Crea PDF</button>
      <br>
-    
+     <br>                                                           <!--pulsante per funzione nuova-->
+     <button id="base" onclick="resBase()">Base</button> 
+     <br>
     <br>
     <br>
    
@@ -65,7 +67,8 @@ pdf.fromData(pdfhtml, options)
 
 }
 
-function retBase(){
+function resBase(){
+  var pdfhtml = document.getElementById('tab32').innerHTML;
   let options = {
         documentSize: 'A4',
         type: 'base64'

@@ -64,6 +64,16 @@ pdf.fromData(pdfhtml, options)
  
 
 }
+
+function retBase(){
+  let options = {
+        documentSize: 'A4',
+        type: 'base64'
+  }
+  pdf.fromData(pdfhtml, options)
+  .then((base64)=>console.log(base64))
+  .catch((err)=>console.err(err))
+}
        </script>
       
       <script src="cordova.js"></script>

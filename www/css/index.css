@@ -1,0 +1,134 @@
+body{
+    background-color: rgba(53, 88, 243, 0.158);
+    font-style :normal;
+    font-family:Courier New;
+    text-align: center;
+    font-weight: bold;
+    
+}
+
+.mybutton{
+    width:310px;
+    height: 80px;
+    background-color: cadetblue;
+    color:rgb(43, 23, 23);
+    text-align: center;
+    font-size: 40px;
+    line-height:80px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    margin-right: auto;
+    margin-left: auto;  
+    -moz-box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 4px rgb(66, 42, 42);
+}
+
+.mybutton:hover{
+background-color:rgba(109, 65, 4, 0.452);
+
+}
+
+.mybutton1{
+  width:310px;
+    height: 80px;
+    background-color: rgb(54, 81, 170);
+    color:rgb(43, 23, 23);
+    text-align: center;
+    font-size: 40px;
+    line-height:80px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    margin-right: auto;
+    margin-left: auto;  
+    -moz-box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 4px rgb(66, 42, 42);
+
+
+}
+
+img{
+  width:50%;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  
+}
+p{
+  font-size: 20px;
+  margin:auto;
+}
+
+ .chiama{
+    width:310px;
+    height: 80px;
+    background-color: rgb(13, 92, 2);
+    color:rgb(21, 35, 49);
+    text-align: center;
+    font-size: 50px;
+    line-height:80px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    margin-right: auto;
+    margin-left: auto;  
+    -moz-box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    text-shadow: 5px 5px 5px rgb(50, 61, 77);
+ }
+
+ .chiama:hover{
+  background-color:rgba(109, 65, 4, 0.452);
+ }
+
+ table{
+  margin:auto;
+  }
+
+ .prodotto{
+  width:100%;
+  height:80px;
+  border: 1px solid blue;
+  border-radius: 2px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+ line-height: 1px;
+  padding:center;
+ margin-right: auto;
+ margin-left: auto;
+  
+}
+
+button{
+  width:310px;
+    height: 50px;
+    background-color: rgb(33, 153, 133);
+    color:rgb(21, 35, 49);
+    text-align: center;
+    font-size: 40px;
+    line-height:40px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    margin-right: auto;
+    margin-left: auto;  
+    -moz-box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    text-shadow: 5px 5px 5px rgb(50, 61, 77);
+}
+
+.pTab{
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  font-size: 23px;
+  line-height: 4px;
+  text-transform: uppercase;
+  border: 1px solid green;
+  border-radius: 2px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  
+}
+

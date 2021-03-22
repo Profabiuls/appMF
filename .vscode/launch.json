@@ -5,14 +5,16 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Run Android on emulator",
+            "name": "Simulate Android in browser",
             "type": "cordova",
             "request": "launch",
             "platform": "android",
-            "target": "emulator",
-            "port": 9222,
-            "sourceMaps": true,
-            "cwd": "${workspaceFolder}"
-        }
+            "target": "chrome",
+            "simulatePort": 8000,
+            "livereload": true,
+            "cwd": "${workspaceFolder}",
+            "sourceMaps": true
+        },
+        
     ]
 }

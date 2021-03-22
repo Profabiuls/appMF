@@ -27,5 +27,12 @@ function onDeviceReady() {
     console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
     document.getElementById('deviceready').classList.add('ready');
     console.log(cordova.file);
+    document.addEventListener('deviceready', function () {
+        cordova.plugins.email.isAvailable(
+            function (isAvailable) {
+                 alert('Service is not available') //unless isAvailable;
+            }
+        );
+    }, false);
 }
 

@@ -40,7 +40,7 @@
      <button id="condividiPdf" onclick="condividiPdf()">Crea PDF</button>
      <br>
      <br>                                                           <!--pulsante per funzione nuova-->
-     <button id="base" onclick="resBase()">Base</button> 
+     <button id="base" onclick="emailOP()">INVIA</button> 
      <br>
     <br>
     <br>
@@ -74,8 +74,15 @@ function resBase(){
         type: 'base64'
   }
   pdf.fromData(pdfhtml, options)
-  .then((base64)=>console.log(base64))
+  .then((base64)=> pdfhtml=base64) //in questa riga pdfhtml diventa un base 64 da rivedere
   .catch((err)=>console.err(err))
+}
+function emailOP(){
+  cordova.plugins.email.open({
+    to: 'murtasfabio@gmail.com',
+    subject:     'Ordine bevande',
+    body: 'Ciao eccoti arrivato un ordine',
+});//trovare una soluzione con attacment
 }
        </script>
       

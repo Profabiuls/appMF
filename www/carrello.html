@@ -37,11 +37,13 @@
      <br>
      <br>
      <br>
-     <button id="condividiPdf" onclick="condividiPdf()">Crea PDF</button>
+     <button id="condividiPdf" onclick="condividiPdf()">Salva PDF</button>
      <br>
+     <p>Rinomina come vuoi il file e salvalo nella memoria</p>
      <br>                                                           <!--pulsante per funzione nuova-->
-     <button id="base" onclick="emailOP()">INVIA</button> 
+     <button id="base" onclick="emailOP()">INVIA Email</button> 
      <br>
+     <p>Allega il file che hai rinominato alla email</p>
     <br>
     <br>
    
@@ -71,13 +73,12 @@ pdf.fromData(pdfhtml, options)
 
 function emailOP(){
   let sub = 'Ordine bevande'
-  let message = 'Ciao ti è arrivato un ordine';
+  let message = "Ciao sono (inserisci il tuo nome ),ti è arrivato un ordine, controlla l' allegato.";
   cordova.plugins.email.open({
     to: 'murtasfabio@gmail.com',
     subject: sub,
     body: message,
-    isHtml: true,
-   // attachments: base// come metto qui il base 64 di pdfhtml chiamato ordineMF.pdf?
+    //attachments: 'storage/emulated/0/download/ordineFM.pdf',
 });//trovare una soluzione con attacment per base 64
 }
        </script>

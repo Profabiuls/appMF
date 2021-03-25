@@ -1,89 +1,99 @@
 <HTML>
-    <HEAD>
-       <LINK REL="stylesheet" TYPE="text/css" href="css/index.css"> 
-               
-     
-      <script src="js/carrello.js"></script>
-       
-    </HEAD>
-    
-    <body>
-        <div id="tab32">
-          <h2>Il tuo Ordine</h2>
-                 
-         <script language=javascript >
-  
-            carrello = eval(localStorage.carrello);
-            document.write("<div id=elenco>");
-            tabella(); 
-            document.write("</div>");
-            totali();
-            
-         </script>
-       </div>
-    <br>
-    <br>
-    <br>
-    <div>
+
+<HEAD>
+  <LINK REL="stylesheet" TYPE="text/css" href="css/index.css">
+
+
+  <script src="js/carrello.js"></script>
+
+</HEAD>
+
+<body>
+  <div id="tab32">
+    <h2>Il tuo Ordine</h2>
+
+    <script language=javascript>
+
+      carrello = eval(localStorage.carrello);
+      document.write("<div id=elenco>");
+      tabella();
+      document.write("</div>");
+      totali();
+
+    </script>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div>
     <a href="prodotti.html" style="text-decoration: none;">
-        <div class="mybutton">PRODOTTI</div>
-        </a>
-
-       <br>
-       <br> 
-       <a href=javascript:svuota() style="text-decoration: none;">
-        <div class="mybutton">Svuota</div>
+      <div class="mybutton">PRODOTTI</div>
     </a>
-     <br>
-     <br>
-     <br>
-     <button id="condividiPdf" onclick="condividiPdf()">Salva PDF</button>
-     <br>
-     <p>Rinomina come vuoi il file e salvalo nella memoria</p>
-     <br>                                                           <!--pulsante per funzione nuova-->
-     <button id="base" onclick="emailOP()">INVIA Email</button> 
-     <br>
-     <p>Allega il file che hai rinominato alla email</p>
+
     <br>
     <br>
-   
-      <a href="index.html" style="text-decoration: none;">
-        <div class="mybutton1">HOME</div>
+    <a href=javascript:svuota() style="text-decoration: none;">
+      <div class="mybutton">Svuota</div>
     </a>
-</div>
-    </BODY>
-      <script> 
+    <br>
+    <br>
+    <button id="base" onclick="emailOP()">INVIA ORDINE</button>
+    <br>
+    <p>Allega in automatico il file che hai rinominato ad un' email</p>
+    <br>
+    <br>
+    <button id="condividiPdf" onclick="condividiPdf()">Salva PDF</button>
+    <br>
+    <p>Rinomina come vuoi il file e salvalo nella memoria</p>
+    <br>
+    <!--pulsante per funzione nuova-->
+    <br>
 
-function condividiPdf(){
+    <a href="index.html" style="text-decoration: none;">
+      <div class="mybutton1">HOME</div>
+    </a>
+  </div>
+</BODY>
+<script>
+
+  function condividiPdf() {
     var pdfhtml = document.getElementById('tab32').innerHTML;
     let options = {
-                documentSize: 'A4',
-                type: 'share',
-                fileName: 'ordineFM.pdf'
-              }
- 
-pdf.fromData(pdfhtml, options)
-    .then((stats)=> console.log('status', stats) )   // ok..., ok if it was able to handle the file to the OS.  
-    .catch((err)=>console.err(err))
- 
+      documentSize: 'A4',
+      type: 'share',
+      fileName: 'ordineFM.pdf'
+    }
 
-}
+    pdf.fromData(pdfhtml, options)
+      .then((stats) => console.log('status', stats))   // ok..., ok if it was able to handle the file to the OS.  
+      .catch((err) => console.err(err))
 
-/*generare base64 codificando la variabile pdfhtml*/
 
-function emailOP(){
-  let sub = 'Ordine bevande'
-  let message = "Ciao sono (inserisci il tuo nome ),ti è arrivato un ordine, controlla l' allegato.";
-  cordova.plugins.email.open({
-    to: 'murtasfabio@gmail.com',
-    subject: sub,
-    body: message,
-    //attachments: 'storage/emulated/0/download/ordineFM.pdf',
-});//trovare una soluzione con attacment per base 64
-}
-       </script>
-      
-      <script src="cordova.js"></script>
-      <script src="js/index.js"></script>
-    </HTML>
-    
+  }
+
+  /*generare base64 codificando la variabile pdfhtml*/
+  let em = document.getElementById('elenco').innerHTML;
+  function genBase64() {
+    let enc = btoa(em);
+    return enc;
+  }
+  let base = genBase64();
+  console.log(base);
+  //fine generazione base64
+
+  function emailOP() {
+    let sub = 'Ordine bevande'
+    let message = "Ciao sono (inserisci il tuo nome ),ti è arrivato un ordine, controlla l' allegato.";
+    cordova.plugins.email.open({
+      to: 'murtasfabio@gmail.com',
+      subject: sub,
+      body: message,
+      attachments: 'base64:ordine.html//' + base + "'"
+    });//trovare una soluzione con attacment per base 64
+  }
+</script>
+
+<script src="cordova.js"></script>
+<script src="js/index.js"></script>
+
+</HTML>

@@ -1,1 +1,1 @@
-{"plugins":["cordova-plugin-whitelist","cordova-plugin-file","cordova-pdf-generator","cordova-plugin-email","es6-promise-plugin"]}
+{"plugins":["cordova-plugin-whitelist","cordova-plugin-file","cordova-pdf-generator","es6-promise-plugin","cordova-plugin-email-composer"]}

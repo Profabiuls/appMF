@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d81b0d51-6bcd-4daf-89f0-6e07abbf4b15" name="Default Changelist" comment="ultime modifiche" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1tOtbD0jg2FIR4XDYx1JYC8SIC0" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="MTHome" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d81b0d51-6bcd-4daf-89f0-6e07abbf4b15" name="Default Changelist" comment="" />
+      <created>1622652035936</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1622652035936</updated>
+      <workItem from="1622652039841" duration="250000" />
+      <workItem from="1623139975171" duration="490000" />
+      <workItem from="1623182836395" duration="687000" />
+      <workItem from="1624904194761" duration="556000" />
+      <workItem from="1624904775128" duration="2754000" />
+      <workItem from="1624909603434" duration="1556000" />
+      <workItem from="1624996429087" duration="2244000" />
+      <workItem from="1625043966853" duration="1079000" />
+      <workItem from="1625052261938" duration="1250000" />
+      <workItem from="1625066590068" duration="311000" />
+      <workItem from="1625066922148" duration="327000" />
+      <workItem from="1625596062001" duration="85000" />
+      <workItem from="1625668844387" duration="23000" />
+      <workItem from="1625772481038" duration="1813000" />
+      <workItem from="1625916086806" duration="2080000" />
+      <workItem from="1625938723027" duration="2894000" />
+      <workItem from="1626103671116" duration="5466000" />
+      <workItem from="1626121691472" duration="2386000" />
+      <workItem from="1626124580419" duration="69000" />
+      <workItem from="1626124654358" duration="64000" />
+      <workItem from="1626124748244" duration="185000" />
+      <workItem from="1626125923152" duration="48000" />
+      <workItem from="1626133044306" duration="2162000" />
+      <workItem from="1626206869007" duration="540000" />
+      <workItem from="1626218830149" duration="179000" />
+    </task>
+    <task id="LOCAL-00001" summary="bug fix">
+      <created>1623140228142</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1623140228142</updated>
+    </task>
+    <task id="LOCAL-00002" summary=" fix mirtillo">
+      <created>1623140405985</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1623140405985</updated>
+    </task>
+    <task id="LOCAL-00003" summary="ultime modifiche">
+      <created>1626218976509</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1626218976509</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="bug fix" />
+    <MESSAGE value=" fix mirtillo" />
+    <MESSAGE value="ultime modifiche" />
+    <option name="LAST_COMMIT_MESSAGE" value="ultime modifiche" />
+  </component>
+</project>

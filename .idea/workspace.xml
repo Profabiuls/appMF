@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d81b0d51-6bcd-4daf-89f0-6e07abbf4b15" name="Default Changelist" comment="ultime modifiche" />
+    <list default="true" id="d81b0d51-6bcd-4daf-89f0-6e07abbf4b15" name="Default Changelist" comment="correzione i di liquori">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/acqua.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/acqua.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/altro.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/altro.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/prodotti.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/prodotti.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,6 +66,9 @@
       <workItem from="1626133044306" duration="2162000" />
       <workItem from="1626206869007" duration="540000" />
       <workItem from="1626218830149" duration="179000" />
+      <workItem from="1627219026125" duration="249000" />
+      <workItem from="1627219297683" duration="2000" />
+      <workItem from="1630948128394" duration="1055000" />
     </task>
     <task id="LOCAL-00001" summary="bug fix">
       <created>1623140228142</created>
@@ -83,7 +91,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626218976509</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Ultimato autocomplete">
+      <created>1627219085321</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1627219085321</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,6 +120,8 @@
     <MESSAGE value="bug fix" />
     <MESSAGE value=" fix mirtillo" />
     <MESSAGE value="ultime modifiche" />
-    <option name="LAST_COMMIT_MESSAGE" value="ultime modifiche" />
+    <MESSAGE value="Ultimato autocomplete" />
+    <MESSAGE value="correzione i di liquori" />
+    <option name="LAST_COMMIT_MESSAGE" value="correzione i di liquori" />
   </component>
 </project>

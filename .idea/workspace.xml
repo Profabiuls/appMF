@@ -4,8 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d81b0d51-6bcd-4daf-89f0-6e07abbf4b15" name="Default Changelist" comment="correzione i di liquori">
+    <list default="true" id="d81b0d51-6bcd-4daf-89f0-6e07abbf4b15" name="Default Changelist" comment="correzione i di liquori ok">
+      <change beforePath="$PROJECT_DIR$/.idea/appCordova.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/appCordova.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/plugins.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/simulate/app-host.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/simulate/app-host.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/simulate/sim-host.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/simulate/sim-host.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/typings/cordova/cordova.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +24,18 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="JsBowerSettings">
+    <bower-package value="" />
+    <bower.json value="" />
   </component>
   <component name="ProjectId" id="1tOtbD0jg2FIR4XDYx1JYC8SIC0" />
   <component name="ProjectViewState">
@@ -30,7 +52,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="MTHome" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript.Bower" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -68,7 +90,11 @@
       <workItem from="1626218830149" duration="179000" />
       <workItem from="1627219026125" duration="249000" />
       <workItem from="1627219297683" duration="2000" />
-      <workItem from="1630948128394" duration="1244000" />
+      <workItem from="1630948128394" duration="1529000" />
+      <workItem from="1630960070384" duration="690000" />
+      <workItem from="1630960770288" duration="89000" />
+      <workItem from="1630960864127" duration="577000" />
+      <workItem from="1631039537492" duration="479000" />
     </task>
     <task id="LOCAL-00001" summary="bug fix">
       <created>1623140228142</created>
@@ -112,7 +138,21 @@
       <option name="project" value="LOCAL" />
       <updated>1630949324439</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="correzione i di liquori ok">
+      <created>1630949443026</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1630949443026</updated>
+    </task>
+    <task id="LOCAL-00008" summary="correzione i di liquori ok">
+      <created>1630949455550</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1630949455550</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +176,11 @@
     <MESSAGE value="ultime modifiche" />
     <MESSAGE value="Ultimato autocomplete" />
     <MESSAGE value="correzione i di liquori" />
-    <option name="LAST_COMMIT_MESSAGE" value="correzione i di liquori" />
+    <MESSAGE value="correzione i di liquori ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="correzione i di liquori ok" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

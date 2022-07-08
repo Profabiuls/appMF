@@ -1,0 +1,2624 @@
+<!DOCTYPE html>
+<html lang="ita">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styleAuto.css">
+    <script src="js/carrello.js"></script>
+
+    <title>Autocomplete</title>
+</head>
+<body>
+<script>inizializza();</script>
+<h1>Digita quello che cerchi</h1>
+
+<!--Make sure the form has the autocomplete function switched off:-->
+
+<div class="autocomplete" style="width:300px;">
+    <input id="myInput" type="text" name="myCountry" placeholder="Prodotto" onclick="find()">
+    <br>
+    <br>
+    <button onclick="find()">Cerca</button>
+</div>
+<!--il div qui soto è nascosto con hidden -->
+<div hidden>
+    <div class=prodotto id="Eva naturale 0.5L x24 5.00€">
+        <h5>Eva naturale 0.5L x24 5.00€</h5>
+        <a class="pTab" href="javascript:aggiungi(1,5.00,'Eva naturale 0.5l x24')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(1,5.00,'Eva naturale 0.5l x24')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/acquaEva.jpg" style="text-decoration: none;">Img</a>
+    </div>
+    <br>
+    <br>
+    <div class="prodotto" id="Eva gasata 0.5L x24 5.00€">
+        <h5>Eva gasata 0.5L x24 5.00€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(2,5.00,'Eva gasata 0.5l x24')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(2,5.00,'Eva gasata 0.5l x24')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/acquaEva.jpg" style="text-decoration: none;">Img</a>
+    </div>
+    <br>
+    <div class="prodotto" id="Eva naturale 1.5L x12 5.00€">
+        <h5>Eva naturale 1.5L x12 5.00€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(3,5.00,'Eva naturale 1.5l x12')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(3,5.00,'Eva naturale 1.5l x12')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/acquaEva.jpg" style="text-decoration: none;">Img</a>
+    </div>
+    <br>
+    <div class="prodotto" id="Eva gasata 1.5L x12 5.00€">
+        <h5>Eva gasata 1.5L x12 5.00€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(4,5.00,'Eva gasata 1.5l x12')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(4,5.00,'Eva gasata 1.5l x12')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/acquaEva.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="Sparea naturale 0.5L x24 5.12€">
+        <h5>Sparea naturale 0.5L x24 5.12€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(5,5.12,'Sparea naturale 0.5l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(5,5.12,'Sparea naturale 0.5l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/acquaSparea.jpg" style="text-decoration: none;">Img</a>
+    </div>
+    <br>
+    <div class="prodotto" id="Sparea gasata 0.5L x24 5.12€">
+        <h5>Sparea gasata 0.5L x24 5.12€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(6,5.12,'Sparea gasata 0.5l x24')" style="text-decoration: none;">+</a>
+        <a class="ptab" href="javascript:rimuovi(6,5.12,'Sparea gasata 0.5l x24')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/acquaSparea.jpg" style="text-decoration: none;">Img</a>
+    </div>
+    <br>
+    <div class="prodotto" id="Sparea naturale 1.5L x12 5.12€">
+        <h5>Sparea naturale 1.5L x12 5.12€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(7,5.12,'Sparea naturale 1.5l x12')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(7,5.12,'Sparea naturale 1.5l x12')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/acquaSparea.jpg" style="text-decoration: none;">Img</a>
+    </div>
+    <br>
+    <div class="prodotto" id="Sparea gasata 1.5L x12 5.12€">
+        <h5>Sparea gasata 1.5L x12 5.12€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(8,5.12,'Sparea gasata 1.5l x12')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:aggiungi(8,5.12,'Sparea gasata 1.5l x12')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/acquaSparea.jpg" style="text-decoration: none;">Img</a>
+    </div>
+    <br>
+    <div class=prodotto id="San Benedetto naturale 0.5L x24 4.51€">
+        <h5>San Benedetto naturale 0.5L x24 4.51€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(9,4.51,'San benedetto naturale 0.5l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(9,4.51,'San benedetto naturale 0.5l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/acquaSanBenedetto.jpg" style="text-decoration: none;">Img</a>
+    </div>
+    <br>
+    <div class="prodotto" id="San Benedetto gasata 0.5L x24 4.51€">
+        <h5>San Benedetto gasata 0.5L x24 4.51€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(10,4.51,'San benedetto gasata 0.5l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(10,4.51,'San benedetto gasata 0.5l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/acquaSanBenedetto.jpg" style="text-decoration: none;">Img</a>
+    </div>
+    <br>
+    <div class="prodotto" id="San Benedetto naturale 1.5L x12 4.51€">
+        <h5>San Benedetto naturale 1.5L x12 4.51€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(11,4.51,'San benedetto naturale 1.5l x12')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(11,4.51,'San benedetto naturale 1.5l x12')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/acquaSanBenedetto.jpg" style="text-decoration: none;">Img</a>
+    </div>
+    <br>
+    <div class="prodotto" id="San Benedetto gasata 1.5L x12 4.51 €">
+        <h5>San Benedetto gasata 1.5L x12 4.51 €</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(12,4.51,'San benedetto gasata 1.5l x12')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(12,4.51,'San benedetto gasata 1.5l x12')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/acquaSanBenedetto.jpg" style="text-decoration: none;">Img</a>
+    </div>
+    <br>
+    <div class=prodotto id="San Bernardo naturale 0.5L x24 4.88€">
+        <h5>San Bernardo naturale 0.5L x24 4.88€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(13,4.88,'San bernardo naturale 0.5l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(13,4.88,'San bernardo naturale 0.5l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/acquaSanBernardo.jpg" style="text-decoration: none;">Img</a>
+    </div>
+    <br>
+    <div class="prodotto" id="San Bernardo gasata 0.5L x24 4.88€">
+        <h5>San Bernardo gasata 0.5L x24 4.88€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(14,4.88,'San bernardo gasata 0.5l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(14,4.88,'San bernardo gasata 0.5l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/acquaSanBernardo.jpg" style="text-decoration: none;">Img</a>
+    </div>
+    <br>
+    <div class="prodotto" id="San Bernardo naturale 1.5L x12 4.88€">
+        <h5>San Bernardo naturale 1.5L x12 4.88€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(15,4.88,'San bernardo naturale 1.5l x12')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(15,4.88,'San bernardo naturale 1.5l x12')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/acquaSanBernardo.jpg" style="text-decoration: none;">Img</a>
+    </div>
+    <br>
+    <div class="prodotto" id="San Bernardo gasata 1.5L x12 4.88€">
+        <h5>San Bernardo gasata 1.5L x12 4.88€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(16,4.88,'San bernardo gasata 1.5l x12')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(16,4.88,'San bernardo gasata 1.5l x12')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/acquaSanBernardo.jpg" style="text-decoration: none;">Img</a>
+    </div>
+    <br>
+    <div class=prodotto id="S.B. premium nat 0.5L x24 5.98€">
+        <h5>S.B. premium nat 0.5L x24 5.98€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(17,5.98,'San bernardo premium naturale 0.5l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(17,5.98,'San bernardo premium naturale 0.5l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/acquaSanBernardoPr.jpg" style="text-decoration: none;">Img</a>
+    </div>
+    <br>
+    <div class="prodotto" id="S.B. premium gas 0.5L x24 5.98€">
+        <h5>S.B. premium gas 0.5L x24 5.98€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(18,5.98,'San bernardo premium gasata 0.5l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(18,5.98,'San bernardo premium gasata 0.5l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/acquaSanBernardoPr.jpg" style="text-decoration: none;">Img</a>
+    </div>
+    <br>
+    <div class=prodotto id="Lilia naturale 0.5L x24 5.98€">
+        <h5>Lilia naturale 0.5L x24 5.98€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(19,5.98,'Lilia naturale 0.5l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(19,5.98,'Lilia naturale 0.5l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/acquaLilia.jpg" style="text-decoration: none;">Img</a>
+    </div>
+    <br>
+    <div class="prodotto" id="Lilia gasata 0.5L x24 5.98€">
+        <h5>Lilia gasata 0.5L x24 5.98€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="ptab" href="javascript:aggiungi(20,5.98,'Lilia gasata 0.5l x24')" style="text-decoration: none;">+</a>
+        <a class="ptab" href="javascript:rimuovi(20,5.98,'Lilia gasata 0.5l x24')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/acquaLilia.jpg" style="text-decoration: none;">Img</a>
+    </div>
+    <div class="prodotto" id="Baffo oro 0.33L x24 21.91€">
+        <h5>Baffo oro 0.33L x24 21.91€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(21,21.91,'Baffo oro 0.33l x24')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(21,21.91,'Baffo oro 0.33l x24')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/birraMorettiBaffoOro.png" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Heineken 0.33L x24 21.91€">
+        <h5>Heineken 0.33L x24 21.91€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(22,21.91,'Heineken 0.33l x24')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(22,21.91,'Heineken 0.33l x24')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/birraHeineken33.png" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Ceres 0.33L x24 37.45€">
+        <h5>Ceres 0.33L x24 37.45€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(23,37.45,'Ceres 0.33l x24')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(23,37.45,'Ceres 0.33l x24')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/birraCeres33.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Becks 0.33L x24 19.76€">
+        <h5>Beck's 0.33L x24 19.76€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(24,19.76,'Beck s 0.33l x24')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(24,19.76,'Beck s 0.33l x24')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/birraBecks33.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Corona 0.33L x24 35.14€">
+        <h5>Corona 0.33L x24 35.14€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(25,35.14,'Corona 0.33l x24')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(25,35.14,'Corona 0.33l x24')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/birraCorona33.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Menabrea 0.33L x24 25.50€">
+        <h5>Menabrea 0.33L x24 25.50€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(26,25.50,'Menabrea 0.33l x24')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(26,25.50,'Menabrea 0.33l x24')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/birraMenabrea33.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Ichnusa 0.33L x24 20.62€">
+        <h5>Ichnusa 0.33L x24 20.62€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(27,20.62,'Ichnusa 0.33l x24')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(27,20.62,'Ichnusa 0.33l x24')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/birraIchnusa33.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Ichnusa non filtrata 0.33L x24 24.16€">
+        <h5>Ichnusa non filtrata 0.33L x24 24.16€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(28,24.16,'Ichnusa non filtrata 0.33l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(28,24.16,'Ichnusa non filtrata 0.33l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/birraIchnusaNonFiltrata33.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Moretti filtrata a freddo 0.30L x24 20.00€">
+        <h5>Moretti filtrata a freddo 0.30L x24 20.00€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(29.1,20.00,'Moretti filtrata a freddo 0.30l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(29.1,20.00,'Moretti filtrata a freddo 0.30l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/birraMorettiFiltrataAFreddo.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Tennent s 0.33L x24 36.36€">
+        <h5>Tennent's 0.33L x24 36.36€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(29,36.36,'Tennent s 0.33l x24')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(29,36.36,'Tennent s 0.33l x24')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/birraTennents33.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Moretti 0.33L x24 17.81€">
+        <h5>Moretti 0.33L x24 17.81€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(30,17.81,'Moretti 0.33l x24')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(30,17.81,'Moretti 0.33l x24')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/birraMoretti33.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Moretti lattina 0.33L x24 17.81€">
+        <h5>Moretti lattina 0.33L x24 17.81€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(31,17.81,'Moretti lattina 0.33l x24')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(31,17.81,'Moretti lattina 0.33l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/birraMorettiLattina.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Ichnusa cruda 0.33L x24 29.04€">
+        <h5>Ichnusa cruda 0.33L x24 29.04€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(32,29.04,'Ichnusa cruda 0.33l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(32,29.04,'Ichnusa cruda 0.33l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/birraIchnusaCruda.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="San Miguel 0.33L x24 15.62€">
+        <h5>San Miguel 0.33L x24 15.62€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(33,15.62,'San Muguel 0.33l x24')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(33,15.62,'San Muguel 0.33l x24')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/birraSanMiguel33.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Messina 0.33L x24 23.13€">
+        <h5>Messina 0.33L x24 23.13€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(34,23.13,'Messina 0.33l x24')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(34,23.13,'Messina 0.33l x24')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/birraMessina33.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Messina cris. sale 0.33L x24 30.26€">
+        <h5>Messina cris. sale 0.33L x24 30.26€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(35,30.26,'Messina Crist sale 0.33l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(35,30.26,'Messina Crist sale 0.33l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/birraMessinaCristalli33.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Bulldog 0.33L x24 39.04€">
+        <h5>Bulldog 0.33L x24 39.04€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(36,39.04,'Bulldog 0.33l x24')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(36,39.04,'Bulldog 0.33l x24')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/birraBulldog33.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Blanche de Bruxelles 0.33L x12 24.16€">
+        <h5>Blanche de Bruxelles 0.33L x12 24.16€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(37,24.16,'Blanche de Bruxelles 0.33l x12')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(37,24.16,'Blanche de Bruxelles 0.33l x12')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/birraBlancheDeBruxelles33.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Erdinger 0.5L x12 18.06€">
+        <h5>Erdinger 0.5L x12 18.06€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(38,18.06,'Erdinger 0.5l x12')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(38,18.06,'Erdinger 0.5l x12')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/birraErdinger05.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Ichnusa 0.66L x15 20.98€">
+        <h5>Ichnusa 0.66L x15 20.98€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(40,20.98,'Ichnusa 0.66l x15')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(40,20.98,'Ichnusa 0.66l x15')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/birraIchnusa066.png" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Ichnusa non filtrata 0.50L x15 21.05€">
+        <h5>Ichnusa non filtrata 0.50L x15 21.05€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(41,21.05,'Ichnusa non filtrata 0.50l x15')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(41,21.05,'Ichnusa non filtrata 0.50l x15')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/birraIchnusaNonFiltrata05.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Moretti 0.66L x15 16.35€">
+        <h5>Moretti 0.66L x15 16.35€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(42,16.35,'Moretti 0.66l x15')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(42,16.35,'Moretti 0.66l x15')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/birraMoretti066.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+
+    <div class="prodotto" id="Menabrea 0.66L x15 24.89€">
+        <h5>Menabrea 0.66L x15 24.89€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(43,24.89,'Menabrea 0.66l x15')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(43,24.89,'Menabrea 0.66l x15')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/birraMenabrea66.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+
+    <div class="prodotto" id="Heineken 0.66L x15 20.98€">
+        <h5>Heineken 0.66L x15 20.98€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(44,20.98,'Heineken 0.66l x15')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(44,20.98,'Heineken 0.66l x15')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/birraHeineken66.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+
+    <div class="prodotto" id="Peroni 0.66L x15 16.84€">
+        <h5>Peroni 0.66L x15 16.84€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(45,16.84,'Peroni 0.66l x15')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(45,16.84,'Peroni 0.66l x15')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/birraPeroni66.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <div class=prodotto id="Heineken blade 8L x1 34.16€">
+        <h5>Heineken blade 8L x1 34.16€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(46,34.16,'Fusto blade Heineken 8l x1')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(46,34.16,'Fusto blade Heineken 8l x1')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/bladeHeineken.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="Blade Messina c.s. 8L x1 37.82€">
+        <h5>Blade Messina c.s. 8L x1 37.82€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(47,37.82,'Fusto blade Messina c.s. 8l x1')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(47,37.82,'Fusto blade Messina c.s. 8l x1')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/bladeMessinaCristalli.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+
+    <div class=prodotto id="Leffe Bionda fusto 6L x1 32.94€">
+        <h5>Leffe Bionda fusto 6L x1 32.94€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(48,32.94,'Fusto Leffe bionda 6l x1')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(48,32.94,'Fusto Leffe bionda 6l x1')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/leffeBlond6litri.png" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+
+    <div class=prodotto id="Leffe Rouge fusto 6L x1 34.16€">
+        <h5>Leffe Rouge fusto 6L x1 34.16€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(49,34.16,'Fusto Rouge bionda 6l x1')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(49,34.16,'Fusto Rouge bionda 6l x1')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/leffeRouge6litri.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <div class="prodotto" id="Coca-cola bott.vetro 0.33L x24 17.32€">
+        <h5>Coca-cola bott.vetro 0.33L x24 17.32€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(50,17.32,'Coca-cola bottiglia vetro 0.33l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(50,17.32,'Coca-cola bottiglia vetro 0.33l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/bibCocacolaVetro.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Coca zero bott.vetro 0.33L x24 17.32€">
+        <h5>Coca zero bott.vetro 0.33L x24 17.32€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(50.1,17.32,'Coca-cola zero bottiglia vetro 0.33l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(50.1,17.32,'Coca-cola zero bottiglia vetro 0.33l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/bibCocacolaVetro.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+
+    <div class="prodotto" id="Coca-cola lattina 0.33L x24 13.79€">
+        <h5>Coca-cola lattina 0.33L x24 13.79€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(51,13.79,'Coca-cola lattina 0.33l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(51,13.79,'Coca-cola lattina 0.33l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/bibCocacolaLattina.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Coca zero lattina 0.33L x24 13.79€">
+        <h5>Coca zero lattina 0.33L x24 13.79€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(51.1,13.79,'Coca-cola zero lattina 0.33l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(51.1,13.79,'Coca-cola zero lattina 0.33l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/bibCocacolaZeroLattina.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Fanta lattina 0.33L x24 13.79€">
+        <h5>Fanta lattina 0.33L x24 13.79€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(51.2,13.79,'Fanta lattina 0.33l x24')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(51.2,13.79,'Fanta lattina 0.33l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/bibFantaLattina.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Sprite lattina 0.33L x24 13.79€">
+        <h5>Sprite lattina 0.33L x24 13.79€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(51.3,13.79,'Sprite lattina 0.33l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(51.3,13.79,'Sprite lattina 0.33l x24')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/bibSpriteLattina.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+
+    <div class="prodotto" id="Coca latt.piccola 0.25L x24 12.08€">
+        <h5>Coca latt.piccola 0.25L x24 12.08€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(52,12.08,'Coca-cola latt. piccola 0.25l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(52,12.08,'Coca-cola latt. piccola 0.25l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/bibCocacolaPiccola.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Coca-cola pet 0.44L x24 22.45€">
+        <h5>Coca-cola pet 0.44L x24 22.45€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(53,22.45,'Coca-cola pet 0.44l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(53,22.45,'Coca-cola pet 0.44l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/bibCocacolaPet45.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Coca-cola zero pet 0.44L x24 22.45€">
+        <h5>Coca-cola zero pet 0.44L x24 22.45€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(53.1,22.45,'Coca-cola zero pet 0.44l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(53.1,22.45,'Coca-cola zero pet 0.44l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/bibCocacolaPet45.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+
+    <div class="prodotto" id="Pepsi lattina 0.33L x24 10.98€">
+        <h5>Pepsi lattina 0.33L x24 10.98€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(54,10.98,'Pepsi lattina 0.33l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(54,10.98,'Pepsi lattina 0.33l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/bibPepsi.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Lemonsoda lattina 0.33L x24 12.69€">
+        <h5>Lemonsoda lattina 0.33L x24 12.69€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(55,12.69,'Lemonsoda lattina 0.33l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(55,12.69,'Lemonsoda lattina 0.33l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/bibLemonsodaLattina.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Estathe latt lim 0.33L x24 19.64€">
+        <h5>Estathe latt lim 0.33L x24 19.64€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(56,19.64,'Esta the lattina limone 0.33l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(56,19.64,'Esta the lattina limone 0.33l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/bibEstatheLattinaLimone.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Estathe latt pes 0.33L x24 19.64€">
+        <h5>Estathe latt pes 0.33L x24 19.64€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(57,19.64,'Esta the lattina pesca 0.33l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(57,19.64,'Esta the lattina pesca 0.33l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/bibEstaThePescaLattina.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Estathe pet limone 0.50L x24 22.94€">
+        <h5>Estathe pet limone 0.50L x24 22.94€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(58,24.16,'Esta the pet limone 0.50l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(58,24.16,'Esta the pet limone 0.50l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/bibEstaTehPetLimone.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Estathe pet pesca 0.50L x24 22.94€">
+        <h5>Estathe pet pesca 0.50L x24 22.94€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(59,24.16,'Esta the pet pesca 0.50l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(59,24.16,'Esta the pet pesca 0.50l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/bibEstaThePetPesca.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Estathe vetro limone 0.25L x24 21.91€">
+        <h5>Estathe vetro limone 0.25L x24 21.91€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(60,21.91,'Esta the vetro limone 0.25l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(60,21.91,'Esta the vetro limone 0.25l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/bibEstaTheVetro.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Estathe vetro pesca 0.25L x24 21.91€">
+        <h5>Estathe vetro pesca 0.25L x24 21.91€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(61,21.91,'Esta the vetro pesca 0.25l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(61,21.91,'Esta the vetro pesca 0.25l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/bibEstaTheVetro.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+
+    <div class="prodotto" id="Chinotto lattina 0.33L x24 12.69€">
+        <h5>Chinotto lattina 0.33L x24 12.69€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(62,12.69,'Chinotto lattina 0.33l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(62,12.69,'Chinotto lattina 0.33l x24')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/bibChinottoLattina.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Redbull 0.33L x24 31.96€">
+        <h5>Redbull 0.33L x24 31.96€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(63,31.96,'Redbull 0.33l x24')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(63,31.96,'Redbull 0.33l x24')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/bibRedbull.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Schweppes lattina 0.33L x24 14.40€">
+        <h5>Schweppes lattina 0.33L x24 14.40€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(64,14.40,'Sweppes lattina 0.33l x24')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(64,14.40,'Sweppes lattina 0.33l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/bibSweppesLattina.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Schweppes bott. vetro 0.18L x24 13.66€">
+        <h5>Schweppes bott. vetro 0.18L x24 13.66€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(65,13.66,'Schweppes bott. vetro 0.18l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(65,13.66,'Schweppes bott. vetro 0.18l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/bibSweppesVetro.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Lemonsoda bott. vetro 0.20L x24 13.18€">
+        <h5>Lemonsoda bott. vetro 0.20L x24 13.18€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(66,13.18,'Lemonsoda bott.vetro 0.20l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(66,13.18,'Lemonsoda bott.vetro 0.20l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/bibLemonsodaVetro.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Gatorade blu 0.50L x12 11.96€">
+        <h5>Gatorade blu 0.50L x12 11.96€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(67,11.96,'Gatorade blu 0.50l x12')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(67,11.96,'Gatorade blu 0.50l x12')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/bibGatoradeBlu.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Gatorade rosso 0.50L x12 11.96€">
+        <h5>Gatorade rosso 0.50L x12 11.96€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(68,11.96,'Gatorade rosso 0.50l x12')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(68,11.96,'Gatorade rosso 0.50l x12')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/bibGatoradeRosso.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Gatorade limone 0.50L x12 11.96€">
+        <h5>Gatorade limone 0.50L x12 11.96€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(68,11.96,'Gatorade limone 0.50l x12')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(68,11.96,'Gatorade limone 0.50l x12')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/bibGatoradeLimone.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Gatorade lemon ice 0.50L x12 11.96€">
+        <h5>Gatorade lemon ice 0.50L x12 11.96€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(69,11.96,'Gatorade lemon ice 0.50l x12')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(69,11.96,'Gatorade lemon ice 0.50l x12')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/bibGatoradeLemonIce.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+
+
+    <div class="prodotto" id="Chinotto lurisia 0.27L x24 24.89€">
+        <h5>Chinotto lurisia 0.27L x24 24.89€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(70,24.89,'Chinotto lurisia 0.24l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(70,24.89,'Chinotto lurisia 0.24l x24')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/bibChinottoLurisia.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Gazzosa lurisia 0.27L x24 24.89€">
+        <h5>Gazzosa lurisia 0.27L x24 24.89€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(71,24.89,'Gazzosa lurisia 0.24l x24')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(71,24.89,'Gazzosa lurisia 0.24l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/bibGazzosaLurisia.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Aranciata lurisia 0.27L x24 24.89€">
+        <h5>Aranciata lurisia 0.27L x24 24.89€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(72,24.89,'Aranciata lurisia 0.24l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(72,24.89,'Aranciata lurisia 0.24l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/bibAranciataLurisia.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Acqua tonica lurisia 0.27L x24 24.89€">
+        <h5>Acqua tonica lurisia 0.27L x24 24.89€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(73,24.89,'Acqua tonica lurisia 0.24l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(73,24.89,'Acqua tonica lurisia 0.24l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/bibTonicaLurisia.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+
+    <div class="prodotto" id="Coca-cola pet 1L x6 8.54€">
+        <h5>Coca-cola pet 1L x6 8.54€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(74,8.54,'Coca-cola 1l x6')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(74,8.54,'Coca-cola 1l x6')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/bibCocacola1litro.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class="prodotto" id="Schweppes pet 1L x6 7.93€">
+        <h5>Schweppes pet 1L x6 7.93€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(75,7.93,'Schweppes pet 1l x6')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(75,7.93,'Schweppes pet 1l x6')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/bibSchweppes1litro.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <div class=prodotto id="Pago ace 0.20L x24 19.03€">
+        <h5>Pago ace 0.20L x24 19.03€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(76,19.03,'Pago ace 0.20l x24')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(76,19.03,'Pago ace 0.20l x24')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/succhiPago.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="Pago albicocca 0.20L x24 19.03€">
+        <h5>Pago albicocca 0.20L x24 19.03€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(77,19.03,'Pago ace 0.20l x24')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(77,19.03,'Pago ace 0.20l x24')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/succhiPago.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="Pago ananas 0.20L x24 32.94€">
+        <h5>Pago ananas 0.20L x24 32.94€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(77.1,32.94,'Pago ananas 0.20l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(77.1,32.94,'Pago ananas 0.20l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/succhiPago.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="Pago arancia 0.20L x24 19.03€">
+        <h5>Pago arancia 0.20L x24 19.03€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(78,19.03,'Pago arancia 0.20l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(78,19.03,'Pago arancia 0.20l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/succhiPago.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="Pago mirtillo 0.20L x24 32.94€">
+        <h5>Pago mirtillo 0.20L x24 32.94€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(79,32.94,'Pago mirtillo 0.20l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(79,32.94,'Pago mirtillo 0.20l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/succhiPago.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="Pago pesca 0.20L x24 19.03€">
+        <h5>Pago pesca 0.20L x24 19.03€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(80,19.03,'Pago pesca 0.20l x24')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(80,19.03,'Pago pesca 0.20l x24')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/succhiPago.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="Pago pomodoro 0.20L x24 19.03€">
+        <h5>Pago pomodoro 0.20L x24 19.03€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(81,19.03,'Pago pomodoro 0.20l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(81,19.03,'Pago pomodoro 0.20l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/succhiPago.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="Pago pera 0.20L x24 19.03€">
+        <h5>Pago pera 0.20L x24 19.03€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(82,19.03,'Pago pera 0.20l x24')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(82,19.03,'Pago pera 0.20l x24')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/succhiPago.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="Amita ace 0.20L x24 19.03€">
+        <h5>Amita ace 0.20L x24 19.03€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(83,19.03,'Amita ace 0.20l x24')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(83,19.03,'Amita ace 0.20l x24')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/succhiAmita.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="Amita albicocca 0.20L x24 19.03€">
+        <h5>Amita albicocca 0.20L x24 19.03€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(84,19.03,'Amita ace 0.20l x24')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(84,19.03,'Amita ace 0.20l x24')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/succhiAmita.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="Amita ananas 0.20L x24 21.35€">
+        <h5>Amita ananas 0.20L x24 21.35€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(84.1,21.35,'Amita ananas 0.20l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(84.1,21.35,'Amita ananas 0.20l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/succhiAmita.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="Amita arancia 0.20L x24 19.03€">
+        <h5>Amita arancia 0.20L x24 19.03€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(84.2,19.03,'Amita arancia 0.20l x24')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(84.2,19.03,'Amita arancia 0.20l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/succhiAmita.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="Amita mirtillo 0.20L x24 21.35€">
+        <h5>Amita mirtillo 0.20L x24 21.35€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(85,21.35,'Amita mirtillo 0.20l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(85,21.35,'Amita mirtillo 0.20l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/succhiAmita.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="Amita pesca 0.20L x24 19.03€">
+        <h5>Amita pesca 0.20L x24 19.03€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(85.1,19.03,'Amita pesca 0.20l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(85.1,19.03,'Amita pesca 0.20l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/succhiAmita.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="Amita pomodoro 0.20L x24 19.03€">
+        <h5>Amita pomodoro 0.20L x24 19.03€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(86,19.03,'Amita pomodoro 0.20l x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(86,19.03,'Amita pomodoro 0.20l x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/succhiAmita.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="Amita pera 0.20L x24 19.03€">
+        <h5>Amita pera 0.20L x24 19.03€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(87,19.03,'Amita pera 0.20l x24')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(87,19.03,'Amita pera 0.20l x24')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/succhiAmita.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <div class=prodotto id="Crodino 0.10L x48 27.82€">
+        <h5>Crodino 0.10L x48 27.82€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(88,27.82,'Crodino 0.10l x48')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(88,27.82,'Crodino 0.10l x48')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/crodino.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id=">Campari soda 0.10L x100 92.72€">
+        <h5>Campari soda 0.10L x100 92.72€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(89,92.72,'Campari soda 0.10l x100')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(89,92.72,'Campari soda 0.10l x100')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/campariSoda.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="San Bitter 0.10L x48 25.50€">
+        <h5>San Bitter 0.10L x48 25.50€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(90,25.50,'San Bitter 0.10l x48')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(90,25.50,'San Bitter 0.10l x48')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/sanBitter.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="Aperol 1L x1 11.96€">
+        <h5>Aperol 1L x1 11.96€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(91,11.96,'Aperol 1l x1')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(91,11.96,'Aperol 1l x1')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/aperol1litro.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="Ginger beer fever tree 0.2L x24 26.93€">
+        <h5>Ginger beer fever tree 0.2L x24 26.93€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(92,26.93,'Ginger beer fever tree 0.20 x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(92,26.93,'Ginger beer fever tree 0.20 x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/gingerBeerFeever.png" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+
+    <div class=prodotto id="Ginger beer f.tree ale 0.2L x24 26.93€">
+        <h5>Ginger beer f.tree ale 0.2L x24 26.93€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(93,26.93,'Ginger beer fever tree ale 0.20 x24')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(93,26.93,'Ginger beer fever tree ale 0.20 x24')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/gingerBeerAleFever.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="Bag in box vino rosso 10L x1 25.62€">
+        <h5>Bag in box vino rosso 10L x1 25.62€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(94,25.92,'Bag in box vino rosso 10l x1')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(94,25.92,'Bag in box vino rosso 10l x1')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/bagInBox.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+
+    <div class=prodotto id="Bag in box vino bianco 10L x1 25.62€">
+        <h5>Bag in box vino bianco 10L x1 25.62€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(95,25.92,'Bag in box vino bianco 10l x1')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(95,25.92,'Bag in box vino bianco 10l x1')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/bagInBox.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <div class=prodotto id="Prosecco Treviso doc 0.75L x6 31.48€">
+        <h5>Prosecco Treviso doc 0.75L x6 31.48€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(96,31.48,'Prosecco Treviso DOC 0.75 x6')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(96,31.48,'Prosecco Treviso DOC 0.75 x6')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/vinoProseccoTrevisoDoc.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="Albaluna Cuvee 0.75L x6 20.50€">
+        <h5>Albaluna Cuvee 0.75L x6 20.50€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(97,20.50,'Albaluna cuvee 0.75 x6')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(97,20.50,'Albaluna cuvee 0.75 x6')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/vinoAlbalunaCuvee.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+
+    <div class=prodotto id="Arneis i filari 0.75L x6 28.55€">
+        <h5>Arneis i filari 0.75L x6 28.55€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(98,28.55,'Arneis i filari 0.75 x6')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(98,28.55,'Arneis i filari 0.75 x6')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/vinoArneisIfilari.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+
+    <div class=prodotto id="Favorita i filari 0.75L x6 28.55€">
+        <h5>Favorita i filari 0.75L x6 28.55€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(99,28.55,'Favorita i filari 0.75 x6')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(99,28.55,'Favorita i filari 0.75 x6')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/vinoFavoritaIfilari.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="Barbera la teresina 0.75L x6 28.55€">
+        <h5>Barbera la teresina 0.75L x6 28.55€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(100,28.55,'Barbera la teresina 0.75 x6')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(100,28.55,'Barbera la teresina 0.75 x6')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/vinoBarberaLaTeresina.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="Dolcetto i filari 0.75L x6 28.55€">
+        <h5>Dolcetto i filari 0.75L x6 28.55€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(101,28.55,'Dolcetto i filari 0.75 x6')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(101,28.55,'Dolcetto i filari 0.75 x6')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/vinoDolcettoIfilari.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="Gewurztraminer ken. 0.75L x6 33.55€">
+        <h5>Gewurztraminer ken. 0.75L x6 33.55€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(102,33.55,'Gewurztraminer kendermann 0.75 x6')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(102,33.55,'Gewurztraminer kendermann 0.75 x6')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/vinoGewurztraminerKendermann.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="Piemonte barbera 0.75L x6 16.84€">
+        <h5>Piemonte barbera 0.75L x6 16.84€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(103,16.84,'Piemonte barbera 0.75 x6')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(103,16.84,'Piemonte barbera 0.75 x6')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/vinoPiemonteBarbera.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+
+    <div class=prodotto id="Piemonte dolcetto 0.75L x6 16.84€">
+        <h5>Piemonte dolcetto 0.75L x6 16.84€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(103,16.84,'Piemonte dolcetto 0.75 x6')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(103,16.84,'Piemonte dolcetto 0.75 x6')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/vinoPiemonteDolcetto.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+
+    <div class=prodotto id="Traminer aromatico IGT 0.75L x6 19.76€">
+        <h5>Traminer aromatico IGT 0.75L x6 19.76€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(104,19.76,'Traminer aromatico IGT 0.75 x6')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(104,19.76,'Traminer aromatico IGT 0.75 x6')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/vinoTraminerArom.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+
+    <div class=prodotto id="958 Santero 0.75L x6 29.22€">
+        <h5>958 Santero 0.75L x6 29.22€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(105,29.22,'958 Santero 0.75 x6')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(105,29.22,'958 Santero 0.75 x6')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/vinoSantero958.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="Bag in box vino rosso 10L x1 25.62€">
+        <h5>Bag in box vino rosso 10L x1 25.62€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(94,25.92,'Bag in box vino rosso 10l x1')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(94,25.92,'Bag in box vino rosso 10l x1')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/bagInBox.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+
+    <div class=prodotto id="Bag in box vino bianco 10L x1 25.62€">
+        <h5>Bag in box vino bianco 10L x1 25.62€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(95,25.92,'Bag in box vino bianco 10l x1')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(95,25.92,'Bag in box vino bianco 10l x1')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/bagInBox.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <div class=prodotto id="Amaro del capo 1L x1 18.70€">
+        <h5>Amaro del capo 1L x1 18.70€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(106,18.70,'Amaro del capo 1l x1')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(106,18.70,'Amaro del capo 1l x1')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/liqAmaroDelCapo.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="Fernet branca  0.70L x1 17.90€">
+        <h5>Fernet branca 0.70L x1 17.90€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(107,17.90,'Fernet branca 0.70l x1')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(107,17.90,'Fernet branca 0.70l x1')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/liqFernetBranca.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="Jagermeister 1L x1 19.00€">
+        <h5>Jagermeister 1L x1 19.00€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(108,19.00,'Jagermeister 1l x1')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(108,19.00,'Jagermeister 1l x1')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/liqJagerm.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="Montenegro 1L x1 21.80€">
+        <h5>Montenegro 1L x1 21.80€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(109,21.80,'Montenegro 1l x1')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(109,21.80,'Montenegro 1l x1')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/liqMontenegro.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="San Simone 0.70L x1 15.00€">
+        <h5>San Simone 0.70L x1 15.00€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(110,15.00,'San Simone 0.70 x1')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(110,15.00,'San Simone 0.70 x1')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/liqSanSimone.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+
+    <div class=prodotto id="Vecchia Roamgna et.nera 1L x1 24.00€">
+        <h5>Vecchia Roamgna et.nera 1L x1 24.00€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(111,24.00,'Vecchia romagna et.nera 1l x1')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(111,24.00,'Vecchia romagna et.nera 1l x1')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/liqVecchiaRomEticNera.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="Cubical gin 0.70L x1 34.00€">
+        <h5>Cubical gin 0.70L x1 34.00€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(112,34.00,'BotanicCubical gin 0.70l x1')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(112,34.00,'BotanicCubical gin 0.70l x1')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/liqCubical.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+
+    <div class=prodotto id="Bosford gin 1L x1 14.00€">
+        <h5>Bosford gin 1L x1 14.00€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(113,14.00,'Bosford gin 1l x1')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(113,14.00,'Bosford gin 1l x1')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/liqBosford.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="Bombay gin 1L x1 21.50€">
+        <h5>Bombay gin 1L x1 21.50€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(114,21.50,'Bombay gin 1l x1')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(114,21.50,'Bombay gin 1l x1')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/liqBombay.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="Gin del professore mad 0.7L x1 42.00€">
+        <h5>Gin del professore mad 0.7L x1 42.00€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(115,42.00,'Gin del professore madame 0.70l x1')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(115,42.00,'Gin del professore madame 0.70l x1')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/liqGinDelProfessore.png" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+
+    <div class=prodotto id="Gin del professore mons 0.7L x1 42.00€">
+        <h5>Gin del professore mons 0.7L x1 42.00€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(116,42.00,'Gin del professore monsieur 0.70l x1')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(116,42.00,'Gin del professore monsieur 0.70l x1')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/liqGinDelProfessore.png" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="Gin pink 47 0.7L x1 23.00€">
+        <h5>Gin pink 47 0.7L x1 23.00€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(117,23.00,'Gin Pink 47 0.70l x1')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(117,23.00,'Gin Pink 47 0.70l x1')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/liqPink.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+
+    <div class=prodotto id="Gin Sabatini 0.7L x1 34.00€">
+        <h5>Gin Sabatini 0.7L x1 34.00€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(118,34.00,'Gin Sabatini 0.70l x1')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(118,34.00,'Gin Sabatini 0.70l x1')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/liqSabatini.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+
+    <div class=prodotto id="Gordons gin 1L x1 16.00€">
+        <h5>Gordon's gin 1L x1 16.00€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(119,16.00,'Gordon gin 1l x1')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(119,16.00,'Gordon gin 1l x1')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/liqGordon.png" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+
+    <div class=prodotto id="Hendricks gin 0.70L x1 33.00€">
+        <h5>Hendrick's gin 0.70L x1 33.00€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(120,33.00,'Hendrick s gin 0.70l x1')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(120,33.00,'Hendrick s gin 0.70l x1')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/liqHendricks.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="Malfy gin limone 1L x1 32.00€">
+        <h5>Malfy gin limone 1L x1 32.00€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(121,32.00,'Malfy gin limone 1l x1')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(121,32.00,'Malfy gin limone 1l x1')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/liqMalfyLimone.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+
+    <div class=prodotto id="Malfy gin original 1L x1 32.00€">
+        <h5>Malfy gin original 1L x1 32.00€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(122,32.00,'Malfy gin original 1l x1')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(122,32.00,'Malfy gin original 1l x1')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/liqMalfyOriginal.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+
+    <div class=prodotto id="Malfy gin pomp.rosa 1L x1 32.00€">
+        <h5>Malfy gin pomp.rosa 1L x1 32.00€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(123,32.00,'Malfy gin pompelmo rosa 1l x1')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(123,32.00,'Malfy gin pompelmo rosa 1l x1')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/liqMalfyPompelmoRo.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+
+    <div class=prodotto id="Tanqueray gin  1L x1 25.00€">
+        <h5>Tanqueray gin 1L x1 25.00€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(124,25.00,'Tanqueray gin 1l x1')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(124,25.00,'Tanqueray gin 1l x1')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/liqTanqueray.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="Grappa Julia bianca 0.70L x1 10.50€">
+        <h5>Grappa Julia bianca 0.70L x1 10.50€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(125,10.50,'Grappa julia bianca 0.70l x1')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(125,10.50,'Grappa julia bianca 0.70l x1')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/liqGrappaJiuliaBian.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+
+    <div class=prodotto id="Grappa Julia gialla 0.70L x1 10.50€">
+        <h5>Grappa Julia gialla 0.70L x1 10.50€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(126,10.50,'Grappa julia gialla 0.70l x1')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(126,10.50,'Grappa julia gialla 0.70l x1')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/liqJuliaGiall.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+
+    <div class=prodotto id="Grappa Nardini 1L x1 24.00€">
+        <h5>Grappa Nardini 1L x1 24.00€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(127,24.00,'Grappa Nardini 1l x1')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(127,24.00,'Grappa Nardini 1l x1')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/liqNardini.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+
+    <div class=prodotto id="Nardini riserva 1L x1 26.00€">
+        <h5>Nardini riserva 1L x1 26.00€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(128,26.00,'Grappa Nardini riserva 1l x1')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(128,26.00,'Grappa Nardini riserva 1l x1')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/liqNardiniRis.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+
+    <div class=prodotto id="Genepy valli occ 0.70L x1 14.50€">
+        <h5>Genepy valli occ 0.70L x1 14.50€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(129,14.50,'Genepy valli occitane 0.70l x1')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(129,14.50,'Genepy valli occitane 0.70l x1')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/liqGenepyVallOccitane.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+
+    <div class=prodotto id="Limoncello riviera 2L x1 15.00€">
+        <h5>Limoncello riviera 2L x1 15.00€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(130,15.00,'Limoncello riviera 2l x1')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(130,15.00,'Limoncello riviera 2l x1')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/liqLimoncelloRiv.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+
+    <div class=prodotto id="Mirto rosso 0.70L x1 10.00€">
+        <h5>Mirto rosso 0.70L x1 10.00€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(131,10.00,'Mirto rosso 0.70l x1')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(131,10.00,'Mirto rosso 0.70l x1')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/liqMirtoRosso.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+
+    <div class=prodotto id="San Buca Molinari 0.70L x1 13.00€">
+        <h5>San Buca Molinari 0.70L x1 13.00€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(132,13.00,'San Buca Molinari 0.70l x1')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(132,13.00,'San Buca Molinari 0.70l x1')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/liqSanBucaMolinari.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="Rum Cacique 500 0.70L x1 28.00€">
+        <h5>Rum Cacique 500 0.70L x1 28.00€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(133,28.00,'Rum Cacique 500 0.70l x1')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(133,28.00,'Rum Cacique 500 0.70l x1')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/liqCacique.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="Rum Kraken 0.70L x1 24.00€">
+        <h5>Rum Kraken 0.70L x1 24.00€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(134,24.00,'Rum Kraken 0.70l x1')" style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(134,24.00,'Rum Kraken 0.70l x1')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/liqKaraken.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="Pampero bianco 1L x1 15.00€">
+        <h5>Pampero bianco 1L x1 15.00€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(135,15.00,'Pampero bianco 1l x1')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(135,15.00,'Pampero bianco 1l x1')" style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/liqPamperoBianc.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="Pampero especial 1L x1 16.00€">
+        <h5>Pampero especial 1L x1 16.00€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(136,16.00,'Pampero especial 1l x1')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(136,16.00,'Pampero especial 1l x1')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/liqPamperoespecial.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+    <br>
+    <div class=prodotto id="Rum Don Papa 0.70L x1 37.00€">
+        <h5>Rum Don Papa 0.70L x1 37.00€</h5>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a class="pTab" href="javascript:aggiungi(137,37.00,'Rum Don Papa 0.70l x1')"
+           style="text-decoration: none;">+</a>
+        <a class="pTab" href="javascript:rimuovi(137,37.00,'Rum Don Papa 0.70l x1')"
+           style="text-decoration: none;">-</a>
+        <a class="pTab" href="img/liqDonPapa.jpg" style="text-decoration: none;">Img</a>
+
+    </div>
+
+</div>
+<p id="demo"></p>
+<a href="prodotti.html" style="text-decoration: none;">
+    <button class="back">Torna</button>
+</a>
+<br>
+<br>
+<a href="carrello.html" style="text-decoration: none;">
+    <div class="button">ORDINI</div>
+</a>
+
+<script src="js/autocomp.js"></script>
+</body>
+</html>

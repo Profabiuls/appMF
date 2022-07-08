@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d81b0d51-6bcd-4daf-89f0-6e07abbf4b15" name="Default Changelist" comment="correzione i di liquori ok">
-      <change beforePath="$PROJECT_DIR$/.idea/appCordova.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/appCordova.iml" afterDir="false" />
+    <list default="true" id="d81b0d51-6bcd-4daf-89f0-6e07abbf4b15" name="Default Changelist" comment="upgrade dipendenze">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/plugins.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/simulate/app-host.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/simulate/app-host.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/simulate/sim-host.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/simulate/sim-host.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/typings/cordova/cordova.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/contatti.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/contatti.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +85,9 @@
       <workItem from="1630960070384" duration="690000" />
       <workItem from="1630960770288" duration="89000" />
       <workItem from="1630960864127" duration="577000" />
-      <workItem from="1631039537492" duration="479000" />
+      <workItem from="1631039537492" duration="587000" />
+      <workItem from="1631046576773" duration="107000" />
+      <workItem from="1633888021627" duration="434000" />
     </task>
     <task id="LOCAL-00001" summary="bug fix">
       <created>1623140228142</created>
@@ -152,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630949455550</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="upgrade dipendenze">
+      <created>1631040065625</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1631040065625</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,7 +177,8 @@
     <MESSAGE value="Ultimato autocomplete" />
     <MESSAGE value="correzione i di liquori" />
     <MESSAGE value="correzione i di liquori ok" />
-    <option name="LAST_COMMIT_MESSAGE" value="correzione i di liquori ok" />
+    <MESSAGE value="upgrade dipendenze" />
+    <option name="LAST_COMMIT_MESSAGE" value="upgrade dipendenze" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -102,42 +102,43 @@ function autocomplete(inp, arr) {
 }
 
 /*An array containing all the country names in the world:*/
-var countries = ["Eva naturale 1.5L x12 5.00€", "Eva gasata 1.5L x12 5.00€", "Eva naturale 0.5L x24 5.00€",
-    "Eva gasata 0.5L x24 5.00€", "Sparea naturale 0.5L x24 5.12€", "Sparea gasata 0.5L x24 5.12€",
-    "Sparea naturale 1.5L x12 5.12€", "Sparea gasata 1.5L x12 5.12€", "San Benedetto naturale 0.5L x24 4.51€",
-    "San Benedetto gasata 0.5L x24 4.51€", "San Benedetto naturale 1.5L x12 4.51€", "San Benedetto gasata 1.5L x12 4.51 €",
-    "San Bernardo naturale 0.5L x24 4.88€", "San Bernardo gasata 0.5L x24 4.88€", "San Bernardo naturale 1.5L x12 4.88€",
-    "San Bernardo gasata 1.5L x12 4.88€", "S.B. premium nat 0.5L x24 5.98€", "S.B. premium gas 0.5L x24 5.98€",
+var countries = ["Eva naturale 1.5L x12 5.12€", "Eva gasata 1.5L x12 5.12€", "Crodino Twist frutti rossi 0.10L x24 24.98€",
+    "Eva naturale 0.5L x24 5.12€", "Crodino Twist agrumi 0.10L x24 24.98€",
+    "Eva gasata 0.5L x24 5.12€", "Sparea naturale 0.5L x24 5.37€", "Sparea gasata 0.5L x24 5.37€",
+    "Sparea naturale 1.5L x12 5.37€", "Sparea gasata 1.5L x12 5.37€", "San Benedetto naturale 0.5L x24 4.88€",
+    "San Benedetto gasata 0.5L x24 4.88€", "San Benedetto naturale 1.5L x12 4.88€", "San Benedetto gasata 1.5L x12 4.88 €",
+    "San Bernardo naturale 0.5L x24 5.25€", "Ruchè CS Castagnole Monf 0.75L x6 35.40€", "San Bernardo gasata 0.5L x24 5.25€", "San Bernardo naturale 1.5L x12 5.25€",
+    "San Bernardo gasata 1.5L x12 5.25€", "S.B. premium nat 0.5L x24 6.34€", "S.B. premium gas 0.5L x24 6.34€",
     "Lilia naturale 0.5L x24 5.98€", "Lilia gasata 0.5L x24 5.98€", "Baffo oro 0.33L x24 21.91€",
     "Heineken 0.33L x24 21.91€", "Ceres 0.33L x24 37.45€", "Becks 0.33L x24 19.76€", "Corona 0.33L x24 35.14€",
-    "Menabrea 0.33L x24 25.50€", "Ichnusa 0.33L x24 20.62€", "Ichnusa non filtrata 0.33L x24 24.16€",
+    "Menabrea 0.33L x24 26.72€", "Ichnusa 0.33L x24 20.92€", "Ichnusa non filtrata 0.33L x24 25.01€",
     "Moretti filtrata a freddo 0.30L x24 20.00€", "Tennent s 0.33L x24 36.36€", "Moretti 0.33L x24 17.81€",
-    "Moretti lattina 0.33L x24 17.81€", "Ichnusa cruda 0.33L x24 29.04€", "San Miguel 0.33L x24 15.62€",
+    "Moretti lattina 0.33L x24 17.81€", "Ichnusa cruda 0.33L x24 33.31€", "San Miguel 0.33L x24 15.62€",
     "Messina 0.33L x24 23.13€", "Messina cris. sale 0.33L x24 30.26€", "Bulldog 0.33L x24 39.04€",
     "Blanche de Bruxelles 0.33L x12 24.16€", "Erdinger 0.5L x12 18.06€", "Ichnusa 0.66L x15 20.98€",
-    "Ichnusa non filtrata 0.50L x15 21.05€", "Moretti 0.66L x15 16.35€", "Menabrea 0.66L x15 24.89€",
-    "Heineken 0.66L x15 20.98€", "Peroni 0.66L x15 16.84€", "Heineken blade 8L x1 34.16€",
-    "Blade Messina c.s. 8L x1 37.82€", "Leffe Bionda fusto 6L x1 32.94€", "Leffe Rouge fusto 6L x1 34.16€",
-    "Coca-cola bott.vetro 0.33L x24 17.32€", "Coca zero bott.vetro 0.33L x24 17.32€",
-    "Coca-cola lattina 0.33L x24 13.79€", "Coca zero lattina 0.33L x24 13.79€", "Fanta lattina 0.33L x24 13.79€",
-    "Sprite lattina 0.33L x24 13.79€", "Coca latt.piccola 0.25L x24 12.08€", "Coca-cola pet 0.44L x24 22.45€",
+    "Ichnusa non filtrata 0.50L x15 21.72€", "Moretti 0.66L x15 16.35€", "Menabrea 0.66L x15 26.11€",
+    "Heineken 0.66L x15 20.98€", "Peroni 0.66L x15 16.84€", "Heineken blade 8L x1 36.60€",
+    "Blade Messina c.s. 8L x1 40.26€", "Leffe Bionda fusto 6L x1 35.38€", "Leffe Rouge fusto 6L x1 39.04€",
+    "Coca-cola bott.vetro 0.33L x24 17.81€", "Bitter ciemme 1L x1 7.80€", "Coca zero bott.vetro 0.33L x24 17.81€",
+    "Coca-cola lattina 0.33L x24 14.15€", "Coca zero lattina 0.33L x24 14.15€", "Fanta lattina 0.33L x24 14.15€",
+    "Sprite lattina 0.33L x24 14.15€", "Coca-cola pet 0.44L x24 22.45€",
     "Coca-cola zero pet 0.44L x24 22.45€", "Pepsi lattina 0.33L x24 10.98€", "Lemonsoda lattina 0.33L x24 12.69€",
-    "Estathe latt lim 0.33L x24 19.64€", "Estathe latt pes 0.33L x24 19.64€", "Estathe pet limone 0.50L x24 22.94€",
-    "Estathe pet pesca 0.50L x24 22.94€", "Estathe vetro limone 0.25L x24 21.91€", "Estathe vetro pesca 0.25L x24 21.91€",
-    "Chinotto lattina 0.33L x24 12.69€", "Redbull 0.33L x24 31.96€", "Schweppes lattina 0.33L x24 14.40€",
-    "Schweppes bott. vetro 0.18L x24 13.66€", "Lemonsoda bott. vetro 0.20L x24 13.18€", "Gatorade blu 0.50L x12 11.96€",
+    "Estathe latt lim 0.33L x24 20.20€", "Estathe latt pes 0.33L x24 20.20€", "Estathe pet limone 0.50L x24 22.94€",
+    "Estathe pet pesca 0.50L x24 22.94€", "Estathe vetro limone 0.25L x24 22.55€", "Estathe vetro pesca 0.25L x24 22.55€",
+    "Chinotto lattina 0.33L x24 12.69€", "Redbull 0.33L x24 31.96€", "Schweppes lattina 0.33L x24 14.88€",
+    "Schweppes bott. vetro 0.18L x24 14.52€", "Lemonsoda bott. vetro 0.20L x24 14.52€", "Gatorade blu 0.50L x12 11.96€",
     "Gatorade rosso 0.50L x12 11.96€", "Gatorade limone 0.50L x12 11.96€", "Gatorade lemon ice 0.50L x12 11.96€",
-    "Chinotto lurisia 0.27L x24 24.89€", "Gazzosa lurisia 0.27L x24 24.89€", "Aranciata lurisia 0.27L x24 24.89€",
-    "Acqua tonica lurisia 0.27L x24 24.89€", "Coca-cola pet 1L x6 8.54€", "Schweppes pet 1L x6 7.93€",
+    "Chinotto lurisia 0.27L x24 25.50€", "Gazzosa lurisia 0.27L x24 25.50€", "Aranciata lurisia 0.27L x24 25.50€",
+    "Acqua tonica lurisia 0.27L x24 25.50€", "Coca-cola pet 1L x6 8.54€", "Schweppes pet 1L x6 8.54€",
     "Pago ace 0.20L x24 19.03€", "Pago albicocca 0.20L x24 19.03€", "Pago ananas 0.20L x24 32.94€",
     "Pago arancia 0.20L x24 19.03€", "Pago mirtillo 0.20L x24 32.94€", "Pago pesca 0.20L x24 19.03€",
     "Pago pomodoro 0.20L x24 19.03€", "Pago pera 0.20L x24 19.03€", "Amita ace 0.20L x24 19.03€",
     "Amita albicocca 0.20L x24 19.03€", "Amita ananas 0.20L x24 21.35€", "Amita arancia 0.20L x24 19.03€",
     "Amita mirtillo 0.20L x24 21.35€", "Amita pesca 0.20L x24 19.03€", "Amita pomodoro 0.20L x24 19.03€",
     "Amita pera 0.20L x24 19.03€", "Crodino 0.10L x48 27.82€", ">Campari soda 0.10L x100 92.72€",
-    "San Bitter 0.10L x48 25.50€", "Aperol 1L x1 11.96€", "Ginger beer fever tree 0.2L x24 26.93€",
-    "Ginger beer f.tree ale 0.2L x24 26.93€", "Bag in box vino rosso 10L x1 25.62€",
-    "Bag in box vino bianco 10L x1 25.62€", "Prosecco Treviso doc 0.75L x6 31.48€", "Albaluna Cuvee 0.75L x6 20.50€",
+    "San Bitter 0.10L x48 25.50€", "Aperol 1L x1 12.14€", "Ginger beer fever tree 0.2L x24 26.93€",
+    "Ginger beer f.tree ale 0.2L x24 26.93€", "Bag in box vino rosso 10L x1 26.84€",
+    "Bag in box vino bianco 10L x1 26.84€", "Prosecco Treviso doc 0.75L x6 31.48€", "Albaluna Cuvee 0.75L x6 20.50€",
     "Arneis i filari 0.75L x6 28.55€", "Favorita i filari 0.75L x6 28.55€", "Barbera la teresina 0.75L x6 28.55€",
     "Dolcetto i filari 0.75L x6 28.55€", "Gewurztraminer ken. 0.75L x6 33.55€", "Piemonte barbera 0.75L x6 16.84€",
     "Piemonte dolcetto 0.75L x6 16.84€", "Traminer aromatico IGT 0.75L x6 19.76€", "958 Santero 0.75L x6 29.22€",
@@ -146,13 +147,14 @@ var countries = ["Eva naturale 1.5L x12 5.00€", "Eva gasata 1.5L x12 5.00€",
     "San Simone 0.70L x1 15.00€", "Vecchia Roamgna et.nera 1L x1 24.00€", "Cubical gin 0.70L x1 34.00€",
     "Bosford gin 1L x1 14.00€", "Bombay gin 1L x1 21.50€", "Gin del professore mad 0.7L x1 42.00€",
     "Gin del professore mons 0.7L x1 42.00€", "Gin pink 47 0.7L x1 23.00€", "Gin Sabatini 0.7L x1 34.00€",
-    "Gordons gin 1L x1 16.00€", "Hendricks gin 0.70L x1 33.00€", "Malfy gin limone 1L x1 32.00€",
+    "Gordons gin 1L x1 16.00€", "Aperitif spritz 1L x1 5.73€", "Hendricks gin 0.70L x1 33.00€", "Malfy gin limone 1L x1 32.00€",
     "Malfy gin original 1L x1 32.00€", "Malfy gin pomp.rosa 1L x1 32.00€", "Tanqueray gin  1L x1 25.00€",
     "Grappa Julia bianca 0.70L x1 10.50€", "Grappa Julia gialla 0.70L x1 10.50€", "Grappa Nardini 1L x1 24.00€",
     "Nardini riserva 1L x1 26.00€", "Genepy valli occ 0.70L x1 14.50€", "Limoncello riviera 2L x1 15.00€",
     "Mirto rosso 0.70L x1 10.00€", "San Buca Molinari 0.70L x1 13.00€", "Rum Cacique 500 0.70L x1 28.00€",
     "Rum Kraken 0.70L x1 24.00€", "Pampero bianco 1L x1 15.00€", "Pampero especial 1L x1 16.00€",
-    "Rum Don Papa 0.70L x1 37.00€"];
+    "Rum Don Papa 0.70L x1 37.00€", "Wodka Wiborowa 1L x1 11.20€", "Wodka Smirnoff 1L x1 13.50€", "Wodka Moskovskaya 1L x1 14.80€"
+];
 
 /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
 autocomplete(document.getElementById("myInput"), countries);
@@ -160,76 +162,76 @@ autocomplete(document.getElementById("myInput"), countries);
 //creare la funzione che genera il prodotto cercato
 function find() {
     let valu = document.getElementById('myInput').value;
-    if (valu === 'Eva naturale 0.5L x24 5.00€') {
-        let nval = document.getElementById('Eva naturale 0.5L x24 5.00€').innerHTML;
+    if (valu === 'Eva naturale 0.5L x24 5.12€') {
+        let nval = document.getElementById('Eva naturale 0.5L x24 5.12€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'Eva gasata 0.5L x24 5.00€') {
-        let nval = document.getElementById('Eva gasata 0.5L x24 5.00€').innerHTML;
+    if (valu === 'Eva gasata 0.5L x24 5.12€') {
+        let nval = document.getElementById('Eva gasata 0.5L x24 5.12€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'Eva naturale 1.5L x12 5.00€') {
-        let nval = document.getElementById('Eva naturale 1.5L x12 5.00€').innerHTML;
+    if (valu === 'Eva naturale 1.5L x12 5.12€') {
+        let nval = document.getElementById('Eva naturale 1.5L x12 5.12€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'Eva gasata 1.5L x12 5.00€') {
-        let nval = document.getElementById('Eva gasata 1.5L x12 5.00€').innerHTML;
+    if (valu === 'Eva gasata 1.5L x12 5.12€') {
+        let nval = document.getElementById('Eva gasata 1.5L x12 5.12€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'Sparea naturale 0.5L x24 5.12€') {
-        let nval = document.getElementById('Sparea naturale 0.5L x24 5.12€').innerHTML;
+    if (valu === 'Sparea naturale 0.5L x24 5.37€') {
+        let nval = document.getElementById('Sparea naturale 0.5L x24 5.37€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'Sparea gasata 0.5L x24 5.12€') {
-        let nval = document.getElementById('Sparea gasata 0.5L x24 5.12€').innerHTML;
+    if (valu === 'Sparea gasata 0.5L x24 5.37€') {
+        let nval = document.getElementById('Sparea gasata 0.5L x24 5.37€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'Sparea naturale 1.5L x12 5.12€') {
-        let nval = document.getElementById('Sparea naturale 1.5L x12 5.12€').innerHTML;
+    if (valu === 'Sparea naturale 1.5L x12 5.37€') {
+        let nval = document.getElementById('Sparea naturale 1.5L x12 5.37€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'Sparea gasata 1.5L x12 5.12€') {
-        let nval = document.getElementById('Sparea gasata 1.5L x12 5.12€').innerHTML;
+    if (valu === 'Sparea gasata 1.5L x12 5.37€') {
+        let nval = document.getElementById('Sparea gasata 1.5L x12 5.37€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'San Benedetto naturale 0.5L x24 4.51€') {
-        let nval = document.getElementById('San Benedetto naturale 0.5L x24 4.51€').innerHTML;
+    if (valu === 'San Benedetto naturale 0.5L x24 4.88€') {
+        let nval = document.getElementById('San Benedetto naturale 0.5L x24 4.88€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'San Benedetto gasata 0.5L x24 4.51€') {
-        let nval = document.getElementById('San Benedetto gasata 0.5L x24 4.51€').innerHTML;
+    if (valu === 'San Benedetto gasata 0.5L x24 4.88€') {
+        let nval = document.getElementById('San Benedetto gasata 0.5L x24 4.88€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'San Benedetto naturale 1.5L x12 4.51€') {
-        let nval = document.getElementById('San Benedetto naturale 1.5L x12 4.51€').innerHTML;
+    if (valu === 'San Benedetto naturale 1.5L x12 4.88€') {
+        let nval = document.getElementById('San Benedetto naturale 1.5L x12 4.88€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'San Benedetto gasata 1.5L x12 4.51 €') {
-        let nval = document.getElementById('San Benedetto gasata 1.5L x12 4.51 €').innerHTML;
+    if (valu === 'San Benedetto gasata 1.5L x12 4.88 €') {
+        let nval = document.getElementById('San Benedetto gasata 1.5L x12 4.88 €').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'San Bernardo naturale 0.5L x24 4.88€') {
-        let nval = document.getElementById('San Bernardo naturale 0.5L x24 4.88€').innerHTML;
+    if (valu === 'San Bernardo naturale 0.5L x24 5.25€') {
+        let nval = document.getElementById('San Bernardo naturale 0.5L x24 5.25€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'San Bernardo gasata 0.5L x24 4.88€') {
-        let nval = document.getElementById('San Bernardo gasata 0.5L x24 4.88€').innerHTML;
+    if (valu === 'San Bernardo gasata 0.5L x24 5.25€') {
+        let nval = document.getElementById('San Bernardo gasata 0.5L x24 5.25€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'San Bernardo naturale 1.5L x12 4.88€') {
-        let nval = document.getElementById('San Bernardo naturale 1.5L x12 4.88€').innerHTML;
+    if (valu === 'San Bernardo naturale 1.5L x12 5.25€') {
+        let nval = document.getElementById('San Bernardo naturale 1.5L x12 5.25€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'San Bernardo gasata 1.5L x12 4.88€') {
-        let nval = document.getElementById('San Bernardo gasata 1.5L x12 4.88€').innerHTML;
+    if (valu === 'San Bernardo gasata 1.5L x12 5.25€') {
+        let nval = document.getElementById('San Bernardo gasata 1.5L x12 5.25€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'S.B. premium nat 0.5L x24 5.98€') {
-        let nval = document.getElementById('S.B. premium nat 0.5L x24 5.98€').innerHTML;
+    if (valu === 'S.B. premium nat 0.5L x24 6.34€') {
+        let nval = document.getElementById('S.B. premium nat 0.5L x24 6.34€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'S.B. premium gas 0.5L x24 5.98€') {
-        let nval = document.getElementById('S.B. premium gas 0.5L x24 5.98€').innerHTML;
+    if (valu === 'S.B. premium gas 0.5L x24 6.34€') {
+        let nval = document.getElementById('S.B. premium gas 0.5L x24 6.34€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
     if (valu === 'Lilia naturale 0.5L x24 5.98€') {
@@ -260,16 +262,16 @@ function find() {
         let nval = document.getElementById('Corona 0.33L x24 35.14€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'Menabrea 0.33L x24 25.50€') {
-        let nval = document.getElementById('Menabrea 0.33L x24 25.50€').innerHTML;
+    if (valu === 'Menabrea 0.33L x24 26.72€') {
+        let nval = document.getElementById('Menabrea 0.33L x24 26.72€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'Ichnusa 0.33L x24 20.62€') {
-        let nval = document.getElementById('Ichnusa 0.33L x24 20.62€').innerHTML;
+    if (valu === 'Ichnusa 0.33L x24 20.92€') {
+        let nval = document.getElementById('Ichnusa 0.33L x24 20.92€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'Ichnusa non filtrata 0.33L x24 24.16€') {
-        let nval = document.getElementById('Ichnusa non filtrata 0.33L x24 24.16€').innerHTML;
+    if (valu === 'Ichnusa non filtrata 0.33L x24 25.01€') {
+        let nval = document.getElementById('Ichnusa non filtrata 0.33L x24 25.01€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
     if (valu === 'Moretti filtrata a freddo 0.30L x24 20.00€') {
@@ -288,8 +290,8 @@ function find() {
         let nval = document.getElementById('Moretti lattina 0.33L x24 17.81€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'Ichnusa cruda 0.33L x24 29.04€') {
-        let nval = document.getElementById('Ichnusa cruda 0.33L x24 29.04€').innerHTML;
+    if (valu === 'Ichnusa cruda 0.33L x24 33.31€') {
+        let nval = document.getElementById('Ichnusa cruda 0.33L x24 33.31€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
     if (valu === 'San Miguel 0.33L x24 15.62€') {
@@ -320,16 +322,16 @@ function find() {
         let nval = document.getElementById('Ichnusa 0.66L x15 20.98€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'Ichnusa non filtrata 0.50L x15 21.05€') {
-        let nval = document.getElementById('Ichnusa non filtrata 0.50L x15 21.05€').innerHTML;
+    if (valu === 'Ichnusa non filtrata 0.50L x15 21.72€') {
+        let nval = document.getElementById('Ichnusa non filtrata 0.50L x15 21.72€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
     if (valu === 'Moretti 0.66L x15 16.35€') {
         let nval = document.getElementById('Moretti 0.66L x15 16.35€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'Menabrea 0.66L x15 24.89€') {
-        let nval = document.getElementById('Menabrea 0.66L x15 24.89€').innerHTML;
+    if (valu === 'Menabrea 0.66L x15 26.11€') {
+        let nval = document.getElementById('Menabrea 0.66L x15 26.11€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
     if (valu === 'Heineken 0.66L x15 20.98€') {
@@ -340,48 +342,44 @@ function find() {
         let nval = document.getElementById('Peroni 0.66L x15 16.84€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'Heineken blade 8L x1 34.16€') {
-        let nval = document.getElementById('Heineken blade 8L x1 34.16€').innerHTML;
+    if (valu === 'Heineken blade 8L x1 36.60€') {
+        let nval = document.getElementById('Heineken blade 8L x1 36.60€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'Blade Messina c.s. 8L x1 37.82€') {
-        let nval = document.getElementById('Blade Messina c.s. 8L x1 37.82€').innerHTML;
+    if (valu === 'Blade Messina c.s. 8L x1 40.26€') {
+        let nval = document.getElementById('Blade Messina c.s. 8L x1 40.26€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'Leffe Bionda fusto 6L x1 32.94€') {
-        let nval = document.getElementById('Leffe Bionda fusto 6L x1 32.94€').innerHTML;
+    if (valu === 'Leffe Bionda fusto 6L x1 35.38€') {
+        let nval = document.getElementById('Leffe Bionda fusto 6L x1 35.38€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'Leffe Rouge fusto 6L x1 34.16€') {
-        let nval = document.getElementById('Leffe Rouge fusto 6L x1 34.16€').innerHTML;
+    if (valu === 'Leffe Rouge fusto 6L x1 39.04€') {
+        let nval = document.getElementById('Leffe Rouge fusto 6L x1 39.04€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'Coca-cola bott.vetro 0.33L x24 17.32€') {
-        let nval = document.getElementById('Coca-cola bott.vetro 0.33L x24 17.32€').innerHTML;
+    if (valu === 'Coca-cola bott.vetro 0.33L x24 17.81€') {
+        let nval = document.getElementById('Coca-cola bott.vetro 0.33L x24 17.81€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'Coca zero bott.vetro 0.33L x24 17.32€') {
-        let nval = document.getElementById('Coca zero bott.vetro 0.33L x24 17.32€').innerHTML;
+    if (valu === 'Coca zero bott.vetro 0.33L x24 17.81€') {
+        let nval = document.getElementById('Coca zero bott.vetro 0.33L x24 17.81€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'Coca-cola lattina 0.33L x24 13.79€') {
-        let nval = document.getElementById('Coca-cola lattina 0.33L x24 13.79€').innerHTML;
+    if (valu === 'Coca-cola lattina 0.33L x24 14.15€') {
+        let nval = document.getElementById('Coca-cola lattina 0.33L x24 14.15€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'Coca zero lattina 0.33L x24 13.79€') {
-        let nval = document.getElementById('Coca zero lattina 0.33L x24 13.79€').innerHTML;
+    if (valu === 'Coca zero lattina 0.33L x24 14.15€') {
+        let nval = document.getElementById('Coca zero lattina 0.33L x24 14.15€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'Fanta lattina 0.33L x24 13.79€') {
-        let nval = document.getElementById('Fanta lattina 0.33L x24 13.79€').innerHTML;
+    if (valu === 'Fanta lattina 0.33L x24 14.15€') {
+        let nval = document.getElementById('Fanta lattina 0.33L x24 14.15€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'Sprite lattina 0.33L x24 13.79€') {
-        let nval = document.getElementById('Sprite lattina 0.33L x24 13.79€').innerHTML;
-        document.getElementById('demo').innerHTML = nval;
-    }
-    if (valu === 'Coca latt.piccola 0.25L x24 12.08€') {
-        let nval = document.getElementById('Coca latt.piccola 0.25L x24 12.08€').innerHTML;
+    if (valu === 'Sprite lattina 0.33L x24 14.15€') {
+        let nval = document.getElementById('Sprite lattina 0.33L x24 14.15€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
     if (valu === 'Coca-cola pet 0.44L x24 22.45€') {
@@ -396,16 +394,16 @@ function find() {
         let nval = document.getElementById('Pepsi lattina 0.33L x24 10.98€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'Lemonsoda lattina 0.33L x24 12.69€') {
-        let nval = document.getElementById('Lemonsoda lattina 0.33L x24 12.69€').innerHTML;
+    if (valu === 'Lemonsoda lattina 0.33L x24 13.79€') {
+        let nval = document.getElementById('Lemonsoda lattina 0.33L x24 13.79€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'Estathe latt lim 0.33L x24 19.64€') {
-        let nval = document.getElementById('Estathe latt lim 0.33L x24 19.64€').innerHTML;
+    if (valu === 'Estathe latt lim 0.33L x24 20.20€') {
+        let nval = document.getElementById('Estathe latt lim 0.33L x24 20.20€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'Estathe latt pes 0.33L x24 19.64€') {
-        let nval = document.getElementById('Estathe latt pes 0.33L x24 19.64€').innerHTML;
+    if (valu === 'Estathe latt pes 0.33L x24 20.20€') {
+        let nval = document.getElementById('Estathe latt pes 0.33L x24 20.20€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
     if (valu === 'Estathe pet limone 0.50L x24 22.94€') {
@@ -416,12 +414,12 @@ function find() {
         let nval = document.getElementById('Estathe pet pesca 0.50L x24 22.94€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'Estathe vetro limone 0.25L x24 21.91€') {
-        let nval = document.getElementById('Estathe vetro limone 0.25L x24 21.91€').innerHTML;
+    if (valu === 'Estathe vetro limone 0.25L x24 22.55€') {
+        let nval = document.getElementById('Estathe vetro limone 0.25L x24 22.55€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'Estathe vetro pesca 0.25L x24 21.91€') {
-        let nval = document.getElementById('Estathe vetro pesca 0.25L x24 21.91€').innerHTML;
+    if (valu === 'Estathe vetro pesca 0.25L x24 22.55€') {
+        let nval = document.getElementById('Estathe vetro pesca 0.25L x24 22.55€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
     if (valu === 'Chinotto lattina 0.33L x24 12.69€') {
@@ -432,16 +430,16 @@ function find() {
         let nval = document.getElementById('Redbull 0.33L x24 31.96€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'Schweppes lattina 0.33L x24 14.40€') {
-        let nval = document.getElementById('Schweppes lattina 0.33L x24 14.40€').innerHTML;
+    if (valu === 'Schweppes lattina 0.33L x24 14.88€') {
+        let nval = document.getElementById('Schweppes lattina 0.33L x24 14.88€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'Schweppes bott. vetro 0.18L x24 13.66€') {
-        let nval = document.getElementById('Schweppes bott. vetro 0.18L x24 13.66€').innerHTML;
+    if (valu === 'Schweppes bott. vetro 0.18L x24 14.52€') {
+        let nval = document.getElementById('Schweppes bott. vetro 0.18L x24 14.52€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'Lemonsoda bott. vetro 0.20L x24 13.18€') {
-        let nval = document.getElementById('Lemonsoda bott. vetro 0.20L x24 13.18€').innerHTML;
+    if (valu === 'Lemonsoda bott. vetro 0.20L x24 14.52€') {
+        let nval = document.getElementById('Lemonsoda bott. vetro 0.20L x24 14.52€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
     if (valu === 'Gatorade blu 0.50L x12 11.96€') {
@@ -460,28 +458,28 @@ function find() {
         let nval = document.getElementById('Gatorade lemon ice 0.50L x12 11.96€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'Chinotto lurisia 0.27L x24 24.89€') {
-        let nval = document.getElementById('Chinotto lurisia 0.27L x24 24.89€').innerHTML;
+    if (valu === 'Chinotto lurisia 0.27L x24 25.50€') {
+        let nval = document.getElementById('Chinotto lurisia 0.27L x24 25.50€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'Gazzosa lurisia 0.27L x24 24.89€') {
-        let nval = document.getElementById('Gazzosa lurisia 0.27L x24 24.89€').innerHTML;
+    if (valu === 'Gazzosa lurisia 0.27L x24 25.50€') {
+        let nval = document.getElementById('Gazzosa lurisia 0.27L x24 25.50€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'Aranciata lurisia 0.27L x24 24.89€') {
-        let nval = document.getElementById('Aranciata lurisia 0.27L x24 24.89€').innerHTML;
+    if (valu === 'Aranciata lurisia 0.27L x24 25.50€') {
+        let nval = document.getElementById('Aranciata lurisia 0.27L x24 25.50€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'Acqua tonica lurisia 0.27L x24 24.89€') {
-        let nval = document.getElementById('Acqua tonica lurisia 0.27L x24 24.89€').innerHTML;
+    if (valu === 'Acqua tonica lurisia 0.27L x24 25.50€') {
+        let nval = document.getElementById('Acqua tonica lurisia 0.27L x24 25.50€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
     if (valu === 'Coca-cola pet 1L x6 8.54€') {
         let nval = document.getElementById('Coca-cola pet 1L x6 8.54€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'Schweppes pet 1L x6 7.93€') {
-        let nval = document.getElementById('Schweppes pet 1L x6 7.93€').innerHTML;
+    if (valu === 'Schweppes pet 1L x6 8.54€') {
+        let nval = document.getElementById('Schweppes pet 1L x6 8.54€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
     if (valu === 'Pago ace 0.20L x24 19.03€') {
@@ -560,8 +558,8 @@ function find() {
         let nval = document.getElementById('San Bitter 0.10L x48 25.50€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'Aperol 1L x1 11.96€') {
-        let nval = document.getElementById('Aperol 1L x1 11.96€').innerHTML;
+    if (valu === 'Aperol 1L x1 12.14€') {
+        let nval = document.getElementById('Aperol 1L x1 12.14€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
     if (valu === 'Ginger beer fever tree 0.2L x24 26.93€') {
@@ -572,12 +570,12 @@ function find() {
         let nval = document.getElementById('Ginger beer f.tree ale 0.2L x24 26.93€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'Bag in box vino rosso 10L x1 25.62€') {
-        let nval = document.getElementById('Bag in box vino rosso 10L x1 25.62€').innerHTML;
+    if (valu === 'Bag in box vino rosso 10L x1 26.84€') {
+        let nval = document.getElementById('Bag in box vino rosso 10L x1 26.84€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
-    if (valu === 'Bag in box vino bianco 10L x1 25.62€') {
-        let nval = document.getElementById('Bag in box vino bianco 10L x1 25.62€').innerHTML;
+    if (valu === 'Bag in box vino bianco 10L x1 26.84€') {
+        let nval = document.getElementById('Bag in box vino bianco 10L x1 26.84€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
     if (valu === 'Prosecco Treviso doc 0.75L x6 31.48€') {
@@ -760,6 +758,42 @@ function find() {
         let nval = document.getElementById('Rum Don Papa 0.70L x1 37.00€').innerHTML;
         document.getElementById('demo').innerHTML = nval;
     }
+    if (valu === 'Wodka Wiborowa 1L x1 11.20€') {
+        let nval = document.getElementById('Wodka Wiborowa 1L x1 11.20€').innerHTML;
+        document.getElementById('demo').innerHTML = nval;
+    }
+    if (valu === 'Wodka Smirnoff 1L x1 13.50€') {
+        let nval = document.getElementById('Wodka Smirnoff 1L x1 13.50€').innerHTML;
+        document.getElementById('demo').innerHTML = nval;
+    }
+    if (valu === 'Wodka Moskovskaya 1L x1 14.80€') {
+        let nval = document.getElementById('Wodka Moskovskaya 1L x1 14.80€').innerHTML;
+        document.getElementById('demo').innerHTML = nval;
+    }
+
+    if (valu === 'Aperitif spritz 1L x1 5.73€') {
+        let nval = document.getElementById('Aperitif spritz 1L x1 5.73€').innerHTML;
+        document.getElementById('demo').innerHTML = nval;
+    }
+
+    if (valu === 'Bitter ciemme 1L x1 7.80€') {
+        let nval = document.getElementById('Bitter ciemme 1L x1 7.80€').innerHTML;
+        document.getElementById('demo').innerHTML = nval;
+    }
+    if (valu === 'Crodino Twist frutti rossi 0.10L x24 24.98€') {
+        let nval = document.getElementById('Crodino Twist frutti rossi 0.10L x24 24.98€').innerHTML;
+        document.getElementById('demo').innerHTML = nval;
+    }
+    if (valu === 'Crodino Twist agrumi 0.10L x24 24.98€') {
+        let nval = document.getElementById('Crodino Twist agrumi 0.10L x24 24.98€').innerHTML;
+        document.getElementById('demo').innerHTML = nval;
+    }
+    if (valu === 'Ruchè CS Castagnole Monf 0.75L x6 35.40€') {
+        let nval = document.getElementById('Ruchè CS Castagnole Monf 0.75L x6 35.40€').innerHTML;
+        document.getElementById('demo').innerHTML = nval;
+    }
+
+
 
 
     console.log(valu);

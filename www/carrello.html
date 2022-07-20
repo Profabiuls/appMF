@@ -2,7 +2,7 @@
 
 <HEAD>
   <LINK REL="stylesheet" TYPE="text/css" href="css/index.css">
-
+<meta http-equiv="refresh" content="7">
 
   <script src="js/carrello.js"></script>
 
@@ -15,6 +15,7 @@
     <script language=javascript>
 
       carrello = eval(localStorage.carrello);
+      eliminaElementoDalCarrello();
       document.write("<div id=elenco>");
       tabella();
       document.write("</div>");
